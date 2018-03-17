@@ -1,0 +1,16 @@
+[Unit]
+Description=rTorrent
+After=network.target
+
+[Service]
+UMask=077
+Type=forking
+KillMode=none
+User=scouseman
+ExecStartPre=-/bin/rm -f /home/scouseman/downloads/session/rtorrent.lock
+ExecStart=/usr/bin/screen -d -m -fa -S rtorrent /usr/local/bin/rtorrent
+ExecStop=/usr/bin/killall -w -s 2 /usr/local/bin/rtorrent
+WorkingDirectory=/home/scouseman/downloads/
+
+[Install]
+WantedBy=multi-user.target
