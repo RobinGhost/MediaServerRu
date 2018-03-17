@@ -1,6 +1,6 @@
 # MediaServerRu
 
-Setup rTorrent systemd  
+Setup rTorrent systemd;  
 
 sudo systemctl daemon-reload  
 sudo service rtorrent start       - start  
