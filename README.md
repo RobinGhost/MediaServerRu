@@ -2,6 +2,8 @@
 
 Setup rTorrent systemd;  
 
+
+sudo systemctl enable rtorrent
 sudo systemctl daemon-reload  
 sudo service rtorrent start       - start  
 sudo service rtorrent stop        - stop  
