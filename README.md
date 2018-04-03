@@ -5,8 +5,8 @@ Setup rTorrent systemd;
 
 sudo systemctl enable rtorrent@8091  
 sudo systemctl daemon-reload  
-sudo service rtorrent start@8091       - start  
-sudo service rtorrent stop@8091        - stop  
+sudo service rtorrent start@8091         - start  
+sudo service rtorrent stop@8091           - stop  
 
 
 Create RuTorrent Password for nginx;  
