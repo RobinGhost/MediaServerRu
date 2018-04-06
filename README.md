@@ -21,6 +21,6 @@ https://github.com/QuickBox/club-QuickBox
 add new method to get finished dir
 
 
-method.insert = d.get_finished_dir,simple,"cat=[folder]/finished/,$d.get_custom1="
+method.insert = d.get_finished_dir,simple,"cat=/srv/dev-disk-by-id-ata-ST4000VN008-2DR166_ZDH2PWQQ-part1/Downloads/seeding/,$d.get_custom1="
+method.set_key = event.download.finished,move_complete,"d.set_directory=/srv/dev-disk-by-id-ata-ST4000VN008-2DR166_ZDH2PWQQ-part1/Downloads/seeding;execute=mkdir,-p,$d.get_finished_dir=;execute=cp,-rpl,$d.get_base_path=,$d.get_finished_dir="
 
-method.set_key = event.download.finished,move_complete,"d.set_directory=$d.get_finished_dir=;execute=mkdir,-p,$d.get_finished_dir=;execute=mv,-u,$d.get_base_path=,$d.get_finished_dir="
